@@ -1,0 +1,22 @@
+{
+  "name": "custom-portfolio",
+  "version": "1.0.0",
+  "description": "A redo of my personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankRuiiz/Portfolio_Custom.git"
+  },
+  "author": "Frank Ruiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrankRuiiz/Portfolio_Custom/issues"
+  },
+  "homepage": "https://github.com/FrankRuiiz/Portfolio_Custom#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
