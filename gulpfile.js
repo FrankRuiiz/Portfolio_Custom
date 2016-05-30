@@ -19,7 +19,9 @@ gulp.task('browserSync', function() {
 // task to process css
 gulp.task('process-styles', function() {
    return sass('source/styles/main.scss', {
-      style: 'expanded'})
+      style: 'expanded',
+      loadPath: 'source/styles'
+   })
        .pipe(autoprefixer('last 2 version'))
        .pipe(gulp.dest('dest/styles/'))
        .pipe(browserSync.reload({
@@ -45,7 +47,7 @@ gulp.task('process-scripts', function() {
 // tasks for gulp to watch
 gulp.task('watch', ['browserSync', 'process-styles'], function() {
    gulp.watch('source/scripts/*.js', ['process-scripts']);
-   gulp.watch('source/styles/*.scss', ['process-styles']);
+   gulp.watch('source/styles/**/*.scss', ['process-styles']);
 });
 
 

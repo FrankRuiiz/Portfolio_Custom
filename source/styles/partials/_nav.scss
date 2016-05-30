@@ -1,0 +1,55 @@
+
+//Toggle Button
+.toggle-nav {
+  display: none;
+}
+
+//menu
+//Menu size on mobile screen sizes
+$mobil-size: "only screen and (min-width: 860px)";
+
+//box shadow mixin
+@mixin nav-shadow($top, $left, $blur, $color) {
+  box-shadow:$top $left $blur $color;
+}
+
+@media #{$mobil-size}{
+  .menu {
+    width: 100%;
+    padding: 10px 18px;
+    @include nav-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.5));
+    border-radius:3px;
+    background:#303030;
+  }
+}
+
+.menu {
+  ul {
+    display: inline-block;
+  }
+
+  li {
+    margin: 0 50px 0 0;
+    float: left;
+    list-style: none;
+    font-size: 17px;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    color: #777;
+    transition: color linear 0.15s;
+  }
+
+  a:hover, .current-item a {
+    text-decoration: none;
+    color: #66a992;
+  }
+}
+
+
+
