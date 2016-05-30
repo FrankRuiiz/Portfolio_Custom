@@ -1,5 +1,3 @@
-$my_base_color: green;
 
-body {
-  background-color: $my_base_color;
-}
+//partials
+@import "partials/_nav.scss";
