@@ -1,15 +1,16 @@
 .menu {
   padding: 5px 0px 5px 0px;
-  background-color: green;
-  position: absolute;
+  background-color: transparent;
+  position: fixed;
   display: inline-block;
   width: 100%;
-  box-sizing: padding-box; }
+  box-sizing: padding-box;
+  z-index: 10; }
   .menu .logo {
     display: inline-block;
     position: absolute;
     height: 85%; }
-    .menu .logo h2 {
+    .menu .logo h3 {
       margin: 0;
       position: relative;
       top: 50%;
@@ -30,8 +31,8 @@
     width: 0px;
     height: 0px;
     position: absolute;
-    top: 0%;
-    right: 30px;
+    top: 0;
+    right: 8.5%;
     content: '';
     transform: translate(0%, -100%);
     border-left: 7px solid transparent;
@@ -50,7 +51,7 @@
     color: #66a992; }
 
 .toggle-nav {
-  padding: 16px;
+  padding: 10px 15px;
   float: right;
   display: inline-block;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
@@ -63,3 +64,18 @@
   .toggle-nav :hover, .toggle-nav .active {
     text-decoration: none;
     color: #66a992; }
+
+header {
+  position: fixed;
+  height: 40vh;
+  width: 100%;
+  z-index: -1;
+  background: #EEE url("../images/headerBgTest.jpg") no-repeat center/cover; }
+
+#skills {
+  position: relative;
+  top: 40vh; }
+
+section {
+  height: 500px;
+  background-color: black; }

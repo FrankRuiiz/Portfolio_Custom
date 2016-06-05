@@ -1,0 +1,19 @@
+
+header {
+  position: fixed;
+  height: 40vh;
+  width: 100%;
+  z-index: -1;
+  background: #EEE url('../images/headerBgTest.jpg') no-repeat center/cover;
+}
+
+#skills {
+  position: relative;
+  top: 40vh;
+}
+
+section {
+  height: 500px;
+  background-color: black;
+}
+

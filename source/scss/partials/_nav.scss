@@ -54,18 +54,19 @@ $menu_bg: #303030;
 //@media #{$mobile-size}{
   .menu {
     padding: 5px 0px 5px 0px;
-    background-color: green;
-    position: absolute;
+    background-color: transparent;
+    position: fixed;
     display: inline-block;
     width: 100%;
     box-sizing: padding-box;
+    z-index: 10;
 
     .logo {
       display: inline-block;
       position: absolute;
       height: 85%;
 
-      h2 {
+      h3 {
         margin: 0;
         position: relative;
         top: 50%;
@@ -93,8 +94,8 @@ $menu_bg: #303030;
       width: 0px;
       height: 0px;
       position: absolute;
-      top: 0%;
-      right: 30px;
+      top: 0;
+      right: 8.5%;
       content: '';
       transform: translate(0%, -100%);
       border-left: 7px solid transparent;
@@ -121,7 +122,7 @@ $menu_bg: #303030;
   }
 
   .toggle-nav {
-    padding: 16px;
+    padding: 10px 15px;
     float: right;
     display: inline-block;
     @include nav-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.5));
