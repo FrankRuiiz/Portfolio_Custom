@@ -10,6 +10,8 @@
     display: inline-block;
     position: absolute;
     height: 85%; }
+    .menu .logo img {
+      width: 50px; }
     .menu .logo h3 {
       margin: 0;
       position: relative;
@@ -43,7 +45,7 @@
     float: none;
     display: block; }
   .menu a {
-    color: #777;
+    color: #000;
     text-decoration: none;
     display: block; }
   .menu a:hover, .menu .current-item a {
@@ -56,10 +58,8 @@
   display: inline-block;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
-  background: #303030;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
-  color: #777;
-  font-size: 20px;
+  font-size: 1.6em;
   transition: color linear 0.15s; }
   .toggle-nav :hover, .toggle-nav .active {
     text-decoration: none;
@@ -67,15 +67,32 @@
 
 header {
   position: fixed;
-  height: 40vh;
+  min-height: 250px;
+  height: 45vh;
   width: 100%;
   z-index: -1;
   background: #EEE url("../images/headerBgTest.jpg") no-repeat center/cover; }
+  header #intro {
+    margin-top: 25%; }
+    header #intro h1 {
+      margin: 0; }
+    header #intro ul {
+      padding: 0; }
+      header #intro ul li {
+        display: inline;
+        white-space: nowrap;
+        font-size: 0.75em; }
+      header #intro ul li:after {
+        content: " \2020"; }
+      header #intro ul li.no-bullet:after {
+        content: none; }
 
-#skills {
-  position: relative;
-  top: 40vh; }
+@media (min-width: 370px) {
+  header {
+    min-height: 400px; }
+    header #intro {
+      margin-top: 20%; } }
 
-section {
-  height: 500px;
-  background-color: black; }
+@media (min-width: 768px) {
+  header {
+    height: 100vh; } }

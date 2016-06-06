@@ -1,19 +1,54 @@
 
 header {
   position: fixed;
-  height: 40vh;
+  min-height: 250px;
+  height: 45vh;
   width: 100%;
   z-index: -1;
   background: #EEE url('../images/headerBgTest.jpg') no-repeat center/cover;
+  #intro {
+    margin-top: 25%;
+
+    h1 {
+      margin: 0;
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        display: inline;
+        white-space: nowrap;
+        font-size: 0.75em;
+        }
+
+      li:after {
+        content: " \2020";
+      }
+
+      li.no-bullet:after {
+        content: none;
+      }
+    }
+  }
 }
 
-#skills {
-  position: relative;
-  top: 40vh;
+
+@media (min-width: 370px) {
+  header {
+    min-height: 400px;
+    #intro {
+      margin-top: 20%;
+    }
+  }
 }
 
-section {
-  height: 500px;
-  background-color: black;
+@media (min-width: 768px) {
+  header {
+    height: 100vh;
+  }
 }
+
+
+
 
