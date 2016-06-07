@@ -73,7 +73,7 @@ header {
   z-index: -1;
   background: #EEE url("../images/headerBgTest.jpg") no-repeat center/cover; }
   header #intro {
-    margin-top: 25%; }
+    margin-top: 5em; }
     header #intro h1 {
       margin: 0; }
     header #intro ul {
@@ -91,8 +91,11 @@ header {
   header {
     min-height: 400px; }
     header #intro {
-      margin-top: 20%; } }
+      margin-top: 9em; } }
 
 @media (min-width: 768px) {
   header {
-    height: 100vh; } }
+    height: 100vh;
+    max-height: 1000px; }
+    header #intro {
+      margin-top: 25%; } }
