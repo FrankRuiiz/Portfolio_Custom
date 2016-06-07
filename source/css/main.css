@@ -1,0 +1,101 @@
+.menu {
+  padding: 5px 0px 5px 0px;
+  background-color: transparent;
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  box-sizing: padding-box;
+  z-index: 10; }
+  .menu .logo {
+    display: inline-block;
+    position: absolute;
+    height: 85%; }
+    .menu .logo img {
+      width: 50px; }
+    .menu .logo h3 {
+      margin: 0;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+  .menu ul.active {
+    display: none; }
+  .menu ul {
+    width: 100%;
+    position: absolute;
+    top: 110%;
+    left: 0px;
+    padding: 10px 18px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    background-color: #303030;
+    margin: 0; }
+  .menu ul:after {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    right: 8.5%;
+    content: '';
+    transform: translate(0%, -100%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #303030; }
+  .menu li {
+    margin: 5px 0px 5px 0px;
+    float: none;
+    display: block; }
+  .menu a {
+    color: #000;
+    text-decoration: none;
+    display: block; }
+  .menu a:hover, .menu .current-item a {
+    text-decoration: none;
+    color: #66a992; }
+
+.toggle-nav {
+  padding: 10px 15px;
+  float: right;
+  display: inline-block;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+  font-size: 1.6em;
+  transition: color linear 0.15s; }
+  .toggle-nav :hover, .toggle-nav .active {
+    text-decoration: none;
+    color: #66a992; }
+
+header {
+  position: fixed;
+  min-height: 250px;
+  height: 45vh;
+  width: 100%;
+  z-index: -1;
+  background: #EEE url("../images/headerBgTest.jpg") no-repeat center/cover; }
+  header #intro {
+    margin-top: 5em; }
+    header #intro h1 {
+      margin: 0; }
+    header #intro ul {
+      padding: 0; }
+      header #intro ul li {
+        display: inline;
+        white-space: nowrap;
+        font-size: 0.75em; }
+      header #intro ul li:after {
+        content: " \2020"; }
+      header #intro ul li.no-bullet:after {
+        content: none; }
+
+@media (min-width: 370px) {
+  header {
+    min-height: 400px; }
+    header #intro {
+      margin-top: 9em; } }
+
+@media (min-width: 768px) {
+  header {
+    height: 100vh;
+    max-height: 1000px; }
+    header #intro {
+      margin-top: 25%; } }

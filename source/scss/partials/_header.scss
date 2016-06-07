@@ -1,0 +1,58 @@
+
+header {
+  position: fixed;
+  min-height: 250px;
+  height: 45vh;
+  width: 100%;
+  z-index: -1;
+  background: #EEE url('../images/headerBgTest.jpg') no-repeat center/cover;
+  #intro {
+    margin-top: 5em;
+
+    h1 {
+      margin: 0;
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        display: inline;
+        white-space: nowrap;
+        font-size: 0.75em;
+        }
+
+      li:after {
+        content: " \2020";
+      }
+
+      li.no-bullet:after {
+        content: none;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 370px) {
+  header {
+    min-height: 400px;
+    #intro {
+       margin-top: 9em;
+     }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 100vh;
+    max-height: 1000px;
+    #intro {
+      margin-top: 25%;
+    }
+  }
+}
+
+
+
+

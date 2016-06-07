@@ -1,0 +1,200 @@
+
+//menu
+//Menu size on mobile screen sizes
+//$desktop-size: "only screen and (min-width: 860px)";
+//$mobile_size: "screen and (max-width: 860px)";
+$menu_bg: #303030;
+
+//box shadow mixin
+@mixin nav-shadow($top, $left, $blur, $color) {
+  box-shadow:$top $left $blur $color;
+}
+
+
+//Mobil
+.menu {
+  padding: 5px 0px 5px 0px;
+  background-color: transparent;
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  box-sizing: padding-box;
+  z-index: 10;
+
+  .logo {
+    display: inline-block;
+    position: absolute;
+    height: 85%;
+    img {
+      width: 50px;
+    }
+
+    h3 {
+      margin: 0;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  ul.active {
+    display: none;
+  }
+
+  ul {
+    width: 100%;
+    position: absolute;
+    top: 110%;
+    left: 0px;
+    padding: 10px 18px;
+    @include nav-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.5));
+    border-radius: 3px;
+    background-color: $menu_bg;
+    margin: 0;
+  }
+
+  ul:after {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    right: 8.5%;
+    content: '';
+    transform: translate(0%, -100%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid $menu_bg;
+  }
+
+  li {
+    margin: 5px 0px 5px 0px;
+    float: none;
+    display: block;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+  }
+
+  a:hover, .current-item a {
+    text-decoration: none;
+    color: #66a992;
+  }
+}
+
+.toggle-nav {
+  padding: 10px 15px;
+  float: right;
+  display: inline-block;
+  @include nav-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.5));
+  border-radius: 3px;
+  //background: $menu_bg;
+  text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+  font-size: 1.6em;
+  transition:color linear 0.15s;
+
+  :hover, .active {
+    text-decoration: none;
+    color:#66a992;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//@media #{$desktop-size}{
+//  .menu {
+//    width: 100%;
+//    padding: 10px 18px;
+//    @include nav-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.5));
+//    border-radius:3px;
+//    background:$menu_bg;
+//  }
+//}
+//
+//.menu {
+//  ul {
+//    display: inline-block;
+//  }
+//
+//  li {
+//    margin: 0 50px 0 0;
+//    float: left;
+//    list-style: none;
+//    font-size: 17px;
+//  }
+//
+//  li:last-child {
+//    margin-right: 0;
+//  }
+//
+//  a {
+//    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+//    color: #777;
+//    transition: color linear 0.15s;
+//    text-decoration: none;
+//  }
+//
+//  a:hover, .current-item a {
+//    text-decoration: none;
+//    color: #66a992;
+//  }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
