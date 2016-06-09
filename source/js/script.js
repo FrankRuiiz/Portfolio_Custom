@@ -12,7 +12,7 @@ $('.toggle-nav').click(function(e) {
 /** Header **/
 
 $(function() {
-    var $liElements = $('#intro ul li');
+    var $liElements = $('.intro ul li');
     var lastElem = null;
     $liElements.
     each(function() {

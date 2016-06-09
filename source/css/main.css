@@ -1,18 +1,26 @@
+body {
+  font-family: 'Roboto Slab', serif; }
+
+.clearfix {
+  overflow: auto; }
+
+section {
+  height: 400px; }
+
 .menu {
-  padding: 5px 0px 5px 0px;
+  padding: 0;
   background-color: transparent;
   position: fixed;
   display: inline-block;
   width: 100%;
   box-sizing: padding-box;
-  z-index: 10; }
+  z-index: 10;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.5); }
   .menu .logo {
     display: inline-block;
     position: absolute;
-    height: 85%; }
-    .menu .logo img {
-      width: 50px; }
-    .menu .logo h3 {
+    height: 100%; }
+    .menu .logo a {
       margin: 0;
       position: relative;
       top: 50%;
@@ -22,24 +30,13 @@
   .menu ul {
     width: 100%;
     position: absolute;
-    top: 110%;
+    top: 100%;
     left: 0px;
     padding: 10px 18px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     background-color: #303030;
     margin: 0; }
-  .menu ul:after {
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    top: 0;
-    right: 8.5%;
-    content: '';
-    transform: translate(0%, -100%);
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid #303030; }
   .menu li {
     margin: 5px 0px 5px 0px;
     float: none;
@@ -56,7 +53,6 @@
   padding: 10px 15px;
   float: right;
   display: inline-block;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
   font-size: 1.6em;
@@ -65,37 +61,86 @@
     text-decoration: none;
     color: #66a992; }
 
+@media (min-width: 768px) {
+  .menu {
+    height: 4em; }
+    .menu .container {
+      height: 100%; }
+    .menu .toggle-nav {
+      display: none; }
+    .menu ul.active {
+      height: 100%;
+      display: inline-block;
+      width: 70%;
+      background-color: inherit;
+      position: static;
+      float: right;
+      box-shadow: none; }
+      .menu ul.active li {
+        float: right;
+        margin: 0 50px 0 0;
+        list-style: none;
+        font-size: 17px;
+        padding-top: 5px; }
+      .menu ul.active li:first-child {
+        margin-right: 0; } }
+
 header {
-  position: fixed;
+  position: absolute;
   min-height: 250px;
   height: 45vh;
   width: 100%;
   z-index: -1;
   background: #EEE url("../images/headerBgTest.jpg") no-repeat center/cover; }
-  header #intro {
-    margin-top: 5em; }
-    header #intro h1 {
-      margin: 0; }
-    header #intro ul {
+  header .intro {
+    margin-top: 25%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto; }
+    header .intro h1 {
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 9vw; }
+    header .intro ul {
       padding: 0; }
-      header #intro ul li {
+      header .intro ul li {
         display: inline;
         white-space: nowrap;
-        font-size: 0.75em; }
-      header #intro ul li:after {
+        font-size: 2.5vw; }
+      header .intro ul li:after {
         content: " \2020"; }
-      header #intro ul li.no-bullet:after {
+      header .intro ul li.no-bullet:after {
         content: none; }
 
-@media (min-width: 370px) {
+@media (min-width: 350px) {
+  header {
+    min-height: 360px; }
+    header .intro {
+      margin-top: 27%; }
+      header .intro h1 {
+        font-size: 8vw; }
+      header .intro ul li {
+        font-size: 2.2vw; } }
+
+@media (min-width: 450px) {
   header {
     min-height: 400px; }
-    header #intro {
-      margin-top: 9em; } }
+    header .intro {
+      margin-top: 26%; } }
+
+@media (min-width: 550px) {
+  header {
+    min-height: 500px; }
+    header .intro {
+      margin-top: 25%; } }
 
 @media (min-width: 768px) {
   header {
     height: 100vh;
-    max-height: 1000px; }
-    header #intro {
-      margin-top: 25%; } }
+    min-height: 600px; }
+    header .intro {
+      margin-top: 23.55%; }
+      header .intro h1 {
+        font-size: 6.5em; }
+      header .intro ul li {
+        font-size: 2em; } }
