@@ -16,6 +16,7 @@ $menu_bg: #303030;
   padding: 0;
   background-color: transparent;
   position: fixed;
+  top: 0;
   display: inline-block;
   width: 100%;
   box-sizing: padding-box;
@@ -99,20 +100,20 @@ $menu_bg: #303030;
     ul.active {
       height: 100%;
       display: inline-block;
-      width: 70%;
+      width: 50%;
       background-color: inherit;
       position: static;
       float: right;
       box-shadow: none;
       li {
-        float: right;
-        margin: 0 50px 0 0;
+        display: inline-block;
+        margin: 0 0 0 8%;
         list-style: none;
         font-size: 17px;
         padding-top: 5px;
       }
       li:first-child {
-        margin-right: 0;
+        margin-left: 0;
       }
     }
   }
