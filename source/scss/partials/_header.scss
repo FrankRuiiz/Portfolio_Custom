@@ -1,29 +1,50 @@
 
+.headerBg, header {
+  height: 45vh;
+  height: 230px;
+  width: 100%;
+  z-index: -10;
+  top: 0;
+}
+
+.headerBg {
+  background: #EEE url('../images/headerBgTest.jpg') no-repeat bottom center;
+  background-size: cover;
+  filter: sepia(1);
+  position: fixed;
+  border-bottom: 15px solid black;
+}
+
 header {
   position: absolute;
-  min-height: 250px;
-  height: 45vh;
-  width: 100%;
-  z-index: -1;
-  background: #EEE url('../images/headerBgTest.jpg') no-repeat center/cover;
+  .content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: inherit;
+  }
   .intro {
-    margin-top: 25%;
-    max-width: 1000px;
+    background: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     h1 {
       text-transform: uppercase;
       margin: 0;
       font-size: 9vw;
+      color: red;
     }
 
     ul {
       padding: 0;
-
       li {
         display: inline;
         white-space: nowrap;
-        font-size: 2.5vw;
+        font-size: 2.7vw;
+        color: blue;
       }
 
       li:after {
@@ -39,54 +60,55 @@ header {
 
 
 @media (min-width: 350px) {
+  .headerBg, header {
+    height: 360px;
+  }
   header {
-    min-height: 360px;
     .intro {
-        margin-top: 27%;
       h1 {
         font-size: 8vw;
       }
 
       ul li {
-        font-size: 2.2vw;
+        font-size: 2.5vw;
       }
      }
   }
 }
 
 @media (min-width: 450px) {
-  header {
-    min-height: 400px;
-    .intro {
-      margin-top: 26%;
-    }
+  .headerBg, header {
+    height: 400px;
   }
 }
 
 @media (min-width: 550px) {
-  header {
-    min-height: 500px;
-    .intro {
-      margin-top: 25%;
-    }
+  .headerBg, header {
+    height: 500px;
   }
 }
 
 @media (min-width: 768px) {
+  .headerBg, header {
+    height: 600px;
+    //height: 100vh;
+  }
   header {
-    height: 100vh;
-    min-height: 600px;
     .intro {
-      margin-top: 23.55%;
-
       h1 {
-        font-size: 6.5em;
+        font-size: 6em;
       }
 
       ul li {
-        font-size: 2em;
+        font-size: 1.9em;
       }
     }
+  }
+}
+
+@media (min-width: 1300px) {
+  .headerBg, header {
+    height: 700px;
   }
 }
 
