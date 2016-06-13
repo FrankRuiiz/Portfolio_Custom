@@ -1,12 +1,110 @@
+//colors
+$ink: #1f201a;
+$gold: #A89447;
+$white: #DCDCDC;
+$silver: #c0c0c0;
+
+// button stuff
+.button {
+  display: inline-block;
+  background: $gold;
+  color: $white;
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 1em 1em;
+  border-radius: 5px;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+
+
+  position: relative;
+  border: none;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.button:hover {
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  transform: translate(0px, -10px);
+  text-decoration: none;
+  color: $silver;
+  background-color:  $ink;
+}
+
+.button:active {
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.2);
+  transform: translate(0px, 10px);
+}
+
+.button:after {
+  content: "";
+  background: #eee;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Roboto Slab', serif;
 }
 
-.clearfix {
-  overflow: auto;
+section {
+  height: 500px;
+
 }
 
-section {
-  height: 400px;
+
+#wrapper {
+  position: relative;
+  top: 230px;
+  background-color: blue;
+  z-index: 3;
 }
+
+@media (min-width: 350px) {
+  #wrapper {
+    top: 350px;
+  }
+}
+
+
+@media (min-width: 550px) {
+  #wrapper {
+    top: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  #wrapper {
+    top: 600px;
+  }
+}
+
+@media (min-width: 1300px) {
+  #wrapper {
+    top: 700px;
+  }
+}
+
+
