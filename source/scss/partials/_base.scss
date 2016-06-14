@@ -84,7 +84,13 @@ section {
 
 @media (min-width: 350px) {
   #wrapper {
-    top: 350px;
+    top:350px;
+  }
+}
+
+@media (min-width: 450px) {
+  #wrapper {
+    top:400px;
   }
 }
 
