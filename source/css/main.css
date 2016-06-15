@@ -51,36 +51,11 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Roboto Slab', serif; }
+  font-family: 'Roboto Slab', serif;
+  color: #DCDCDC; }
 
 section {
   height: 500px; }
-
-#wrapper {
-  position: relative;
-  top: 230px;
-  background-color: blue;
-  z-index: 3; }
-
-@media (min-width: 350px) {
-  #wrapper {
-    top: 350px; } }
-
-@media (min-width: 450px) {
-  #wrapper {
-    top: 400px; } }
-
-@media (min-width: 550px) {
-  #wrapper {
-    top: 500px; } }
-
-@media (min-width: 768px) {
-  #wrapper {
-    top: 600px; } }
-
-@media (min-width: 1300px) {
-  #wrapper {
-    top: 700px; } }
 
 .menu {
   padding: 0;
@@ -259,3 +234,37 @@ header {
 @media (min-width: 1300px) {
   .headerBg, header {
     height: 700px; } }
+
+#wrapper {
+  position: relative;
+  top: 230px;
+  background-color: #1f201a;
+  z-index: 3; }
+
+@media (min-width: 350px) {
+  #wrapper {
+    top: 350px; } }
+
+@media (min-width: 450px) {
+  #wrapper {
+    top: 400px; } }
+
+@media (min-width: 550px) {
+  #wrapper {
+    top: 500px; } }
+
+@media (min-width: 768px) {
+  #wrapper {
+    top: 600px; } }
+
+@media (min-width: 1300px) {
+  #wrapper {
+    top: 700px; } }
+
+#about #portrait {
+  background: url("../images/portrait.jpg") no-repeat center center;
+  background-size: cover;
+  -webkit-filter: grayscale(85%);
+          filter: grayscale(85%);
+  height: 300px;
+  vertical-align: middle; }
