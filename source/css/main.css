@@ -54,9 +54,6 @@ body {
   font-family: 'Roboto Slab', serif;
   color: #DCDCDC; }
 
-section {
-  height: 500px; }
-
 .menu {
   padding: 0;
   background-color: transparent;
@@ -166,8 +163,6 @@ section {
 .headerBg {
   background: #1f201a url("../images/headerBgTest.jpg") no-repeat bottom center;
   background-size: cover;
-  -webkit-filter: grayscale(75%);
-          filter: grayscale(75%);
   position: fixed; }
 
 .bg-color-black {
@@ -261,10 +256,28 @@ header {
   #wrapper {
     top: 700px; } }
 
-#about #portrait {
-  background: url("../images/portrait.jpg") no-repeat center center;
+#about .content {
+  padding: 3em;
+  background-color: #c0c0c0; }
+  #about .content h2, #about .content p {
+    color: #1f201a; }
+  #about .content a {
+    margin-top: 1em; }
+
+#about .portrait {
+  border: 15px solid #c0c0c0;
+  background: url("../images/portrait.jpg") no-repeat top center;
   background-size: cover;
-  -webkit-filter: grayscale(85%);
-          filter: grayscale(85%);
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
   height: 300px;
   vertical-align: middle; }
+
+@media (min-width: 500px) {
+  #about .portrait {
+    height: 450px; } }
+
+@media (min-width: 990px) {
+  #about .content {
+    height: 450px;
+    padding: 7em 4em 0 4em; } }
