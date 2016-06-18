@@ -1,6 +1,6 @@
 #about {
+  padding-top: 3.5em;
   .content {
-
     background-color: $silver;
     h2, p {
       color: $ink;
@@ -21,7 +21,6 @@
 
 @media (min-width: 500px) {
   #about {
-    padding: 3.5em 0;
     .portrait {
       height: 450px;
     }

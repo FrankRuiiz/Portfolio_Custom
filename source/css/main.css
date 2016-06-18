@@ -259,45 +259,58 @@ header {
   #wrapper {
     top: 700px; } }
 
-#about .content {
-  background-color: #c0c0c0; }
-  #about .content h2, #about .content p {
-    color: #1f201a; }
-  #about .content a {
-    margin-top: 1em; }
-
-#about .portrait {
-  border: 15px solid #c0c0c0;
-  background: url("../images/portrait.jpg") no-repeat top center;
-  background-size: cover;
-  -webkit-filter: grayscale(90%);
-          filter: grayscale(90%);
-  height: 300px;
-  vertical-align: middle; }
+#about {
+  padding-top: 3.5em; }
+  #about .content {
+    background-color: #c0c0c0; }
+    #about .content h2, #about .content p {
+      color: #1f201a; }
+    #about .content a {
+      margin-top: 1em; }
+  #about .portrait {
+    border: 15px solid #c0c0c0;
+    background: url("../images/portrait.jpg") no-repeat top center;
+    background-size: cover;
+    -webkit-filter: grayscale(90%);
+            filter: grayscale(90%);
+    height: 300px;
+    vertical-align: middle; }
 
 @media (min-width: 500px) {
-  #about {
-    padding: 3.5em 0; }
-    #about .portrait {
-      height: 450px; } }
+  #about .portrait {
+    height: 450px; } }
 
 @media (min-width: 990px) {
   #about .content {
     height: 450px;
     padding: 7em 4em 0 4em; } }
 
-.skills-wrapper {
-  overflow: hidden;
-  background-color: #1f201a; }
-
-.sliding-background {
-  background: url("../images/skills.png") repeat-x;
-  height: 200px;
-  width: 5000px;
-  animation: skill-slide 60s linear infinite; }
-
 @keyframes skill-slide {
   0% {
     transform: translate3d(0, 0, 0); }
   100% {
     transform: translate3d(-1692px, 0, 0); } }
+
+#skills {
+  color: #1f201a;
+  padding-top: 3.5em; }
+  #skills .content {
+    background-color: #A89447;
+    padding-bottom: 3em; }
+  #skills div div h2 {
+    font-size: 1.5em;
+    padding: 0 0.5em 0.5em; }
+  #skills .skills-wrapper {
+    overflow: hidden;
+    background-color: #1f201a;
+    box-shadow: 0 0 15px 3px #1f201a; }
+    #skills .skills-wrapper .sliding-background {
+      background: url("../images/skills.png") repeat-x;
+      height: 200px;
+      width: 5000px;
+      animation: skill-slide 60s linear infinite; }
+
+@media (min-width: 500px) {
+  #skills div div h2 {
+    font-size: 1.8em;
+    margin: 1em 0; } }
