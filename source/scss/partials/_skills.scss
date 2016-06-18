@@ -1,0 +1,20 @@
+.skills-wrapper {
+   overflow: hidden;
+  background-color: $ink;
+ }
+
+.sliding-background {
+  background: url('../images/skills.png') repeat-x;
+  height: 200px;
+  width: 5000px;
+  animation: skill-slide 60s linear infinite;
+}
+
+@keyframes skill-slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
