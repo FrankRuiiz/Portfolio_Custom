@@ -3,7 +3,6 @@
 //Menu size on mobile screen sizes
 //$desktop-size: "only screen and (min-width: 860px)";
 //$mobile_size: "screen and (max-width: 860px)";
-$menu_bg: #303030;
 
 //box shadow mixin
 @mixin nav-shadow($top, $left, $blur, $color) {
@@ -21,13 +20,8 @@ $menu_bg: #303030;
   width: 100%;
   box-sizing: padding-box;
   z-index: 10;
-  border-bottom: 1px solid rgba(192,192,192, .5);
-
   .logo {
-    display: inline-block;
-    position: absolute;
-    height: 100%;
-
+    display: none;
     a {
       margin: 0;
       position: relative;
@@ -48,7 +42,7 @@ $menu_bg: #303030;
     padding: 10px 18px;
     @include nav-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.5));
     border-radius: 3px;
-    background-color: $menu_bg;
+    background-color: $ink;
     margin: 0;
   }
 
@@ -56,17 +50,25 @@ $menu_bg: #303030;
     margin: 5px 0px 5px 0px;
     float: none;
     display: block;
+    padding-top: 0;
+    padding-left: .5em;
+    border-left: .2em solid transparent;
+  }
+
+  li:hover {
+    border-left: .2em solid $gold;
+    color: $white;
   }
 
   a {
-    color: #000;
+    color: $silver;
     text-decoration: none;
     display: block;
   }
 
   a:hover, .current-item a {
     text-decoration: none;
-    color: #66a992;
+    color: inherit;
   }
 }
 
@@ -74,16 +76,14 @@ $menu_bg: #303030;
   padding: 10px 15px;
   float: right;
   display: inline-block;
-  //@include nav-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.5));
   border-radius: 3px;
-  //background: $menu_bg;
   text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
   font-size: 1.6em;
   transition:color linear 0.15s;
 
   :hover, .active {
     text-decoration: none;
-    color:#66a992;
+    color:$white;
   }
 }
 
@@ -91,6 +91,20 @@ $menu_bg: #303030;
 @media (min-width: 768px) {
   .menu {
     height: 4em;
+    .logo{
+      display: inline-block;
+      position: absolute;
+      height: 100%;
+
+      a {
+        color: $white;
+        font-size: 2em;
+      }
+
+      a:hover {
+        color: $gold;
+      }
+    }
     .container {
       height: 100%;
     }
@@ -99,21 +113,38 @@ $menu_bg: #303030;
     }
     ul.active {
       height: 100%;
-      display: inline-block;
-      width: 50%;
+      display: block;
+      width: 55%;
       background-color: inherit;
       position: static;
       float: right;
       box-shadow: none;
+      padding-top: 1em;
       li {
         display: inline-block;
-        margin: 0 0 0 8%;
+        margin: 0 0 0 7%;
         list-style: none;
         font-size: 17px;
-        padding-top: 5px;
+        height: 100%;
       }
       li:first-child {
         margin-left: 0;
+      }
+
+      a {
+        display: inline-block;
+        padding-top: .3em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .menu {
+    ul.active {
+      width: 40%;
+      li {
+        margin: 0 0 0 10%;
       }
     }
   }

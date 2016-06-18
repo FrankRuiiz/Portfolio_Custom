@@ -9,7 +9,7 @@
 .headerBg {
   background: $ink url('../images/headerBgTest.jpg') no-repeat bottom center;
   background-size: cover;
-  filter: grayscale(75%);
+  //filter: grayscale(75%);
   position: fixed;
 }
 
@@ -44,7 +44,7 @@ header {
       li {
         display: inline;
         white-space: nowrap;
-        font-size: 2.9vw;
+        font-size: 2.8vw;
         color: $white;
       }
 
@@ -68,7 +68,7 @@ header {
 
 @media (min-width: 350px) {
   .headerBg, header {
-    height: 360px;
+    height: 350px;
   }
 }
 
@@ -95,8 +95,11 @@ header {
       }
 
       ul li {
-        font-size: 1.75em;
+        font-size: 1.72em;
       }
+    }
+    .contact-me .button {
+      font-size: 1.2em;
     }
   }
 }

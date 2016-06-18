@@ -1,0 +1,37 @@
+#wrapper {
+  position: relative;
+  top: 230px;
+  background-color: $ink;
+  z-index: 3;
+}
+
+@media (min-width: 350px) {
+  #wrapper {
+    top:350px;
+  }
+}
+
+@media (min-width: 450px) {
+  #wrapper {
+    top:400px;
+  }
+}
+
+
+@media (min-width: 550px) {
+  #wrapper {
+    top: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  #wrapper {
+    top: 600px;
+  }
+}
+
+@media (min-width: 1300px) {
+  #wrapper {
+    top: 700px;
+  }
+}

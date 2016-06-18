@@ -1,0 +1,38 @@
+#about {
+  .content {
+
+    background-color: $silver;
+    h2, p {
+      color: $ink;
+    }
+    a {
+      margin-top: 1em;
+    }
+  }
+  .portrait {
+    border: 15px solid $silver;
+    background: url('../images/portrait.jpg') no-repeat top center;
+    background-size: cover;
+    filter: grayscale(90%);
+    height: 300px;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 500px) {
+  #about {
+    padding: 3.5em 0;
+    .portrait {
+      height: 450px;
+    }
+  }
+}
+
+@media (min-width: 990px) {
+  #about {
+    .content {
+      height: 450px;
+      padding: 7em 4em 0 4em;
+    }
+  }
+}
