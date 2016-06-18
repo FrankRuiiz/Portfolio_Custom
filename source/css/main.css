@@ -54,6 +54,9 @@ body {
   font-family: 'Roboto Slab', serif;
   color: #DCDCDC; }
 
+#placeholder {
+  height: 500px; }
+
 .menu {
   padding: 0;
   background-color: transparent;
@@ -257,7 +260,6 @@ header {
     top: 700px; } }
 
 #about .content {
-  padding: 3em;
   background-color: #c0c0c0; }
   #about .content h2, #about .content p {
     color: #1f201a; }
@@ -274,10 +276,28 @@ header {
   vertical-align: middle; }
 
 @media (min-width: 500px) {
-  #about .portrait {
-    height: 450px; } }
+  #about {
+    padding: 3.5em 0; }
+    #about .portrait {
+      height: 450px; } }
 
 @media (min-width: 990px) {
   #about .content {
     height: 450px;
     padding: 7em 4em 0 4em; } }
+
+.skills-wrapper {
+  overflow: hidden;
+  background-color: #1f201a; }
+
+.sliding-background {
+  background: url("../images/skills.png") repeat-x;
+  height: 200px;
+  width: 5000px;
+  animation: skill-slide 60s linear infinite; }
+
+@keyframes skill-slide {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-1692px, 0, 0); } }
