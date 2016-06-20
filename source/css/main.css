@@ -315,100 +315,104 @@ header {
     font-size: 1.8em;
     margin: 1em 0; } }
 
-.folio1 {
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-  float: left;
-  border: 10px solid #000;
-  overflow: hidden;
-  position: relative;
-  text-align: center; }
-
-.folio1 .face {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0; }
-
-/* styling effects when hover takes effect */
-.folio1 img {
+.ch-grid {
+  background-color: #A89447;
+  margin: 40px 0 0 0;
+  padding: 0;
+  list-style: none;
   display: block;
-  position: relative; }
-
-.folio1 h2 {
-  text-transform: uppercase;
-  color: #fff;
   text-align: center;
-  position: relative;
-  font-size: 17px;
-  padding: 10px; }
+  width: 100%; }
 
-.folio1 p {
-  font-style: italic;
-  font-size: 12px;
-  position: relative;
-  color: #fff;
-  padding: 20px;
-  text-align: center; }
+.ch-grid:after, .ch-item:before {
+  content: '';
+  display: table; }
 
-.folio1 a.icon {
+.ch-grid:after {
+  clear: both; }
+
+.ch-grid li {
+  width: 220px;
+  height: 220px;
   display: inline-block;
-  text-decoration: none;
-  padding: 7px 14px;
-  background: #fff;
-  border-radius: 25px;
-  color: #000;
-  text-transform: uppercase; }
+  margin: 20px; }
 
-.folio1 img {
-  transition: 0.5s; }
+.ch-item {
+  background-color: lightskyblue;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: default; }
 
-.folio1 .face {
-  background-color: rgba(0, 0, 0, 0.8);
+.ch-info-wrap, .ch-info {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%; }
+
+.ch-info-wrap {
+  top: 20px;
+  left: 20px;
+  background-color: #A89447;
+  box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.2), inset 0 0 3px rgba(115, 114, 23, 0.8); }
+
+.ch-info > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-position: center center; }
+
+.ch-info .ch-info-front {
+  transition: all 0.6s ease-in-out; }
+
+.ch-info .ch-info-back {
   opacity: 0;
-  transition: 500ms; }
+  background: #223e87;
+  pointer-events: none;
+  transform: scale(1.5);
+  transition: all 0.4s ease-in-out 0.2s; }
 
-.folio1 h2 {
-  opacity: 0;
-  background: transparent;
-  transform: rotate(180deg) skew(100deg, 100deg);
-  transition: 500ms;
-  font-size: 32px; }
+.ch-img-1 {
+  background-image: url(http://tympanus.net/Tutorials/CircleHoverEffects/images/14.jpg); }
 
-.folio1 p {
-  font-size: 22px;
-  opacity: 0;
-  transform: rotate(180deg) skew(100deg, 100deg);
-  transition: 500ms; }
+.ch-info h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin: 0 15px;
+  padding: 40px 0 0 0;
+  height: 80px;
+  text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0, 0, 0, 0.3); }
 
-.folio1 a.icon {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: 500ms; }
+.ch-info p {
+  color: #fff;
+  padding: 10px 5px 0;
+  font-style: italic;
+  margin: 0 30px;
+  font-size: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5); }
 
-/* Hover overs */
-.folio1:hover .face {
-  opacity: 1;
-  transition-delay: 0s;
-  cursor: pointer; }
+.ch-info p a {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding-top: 4px; }
 
-.folio1:hover img {
-  transition-delay: 0s; }
+.ch-info p a:hover {
+  color: #fff; }
 
-.folio1:hover h2 {
-  opacity: 1;
+.ch-item:hover .ch-info-front {
+  transform: scale(0);
+  opacity: 0; }
+
+.ch-item:hover .ch-info-back {
   transform: scale(1);
-  transition-delay: 0.1s; }
-
-.folio1:hover p {
   opacity: 1;
-  transform: scale(1);
-  transition-delay: 0.2s; }
-
-.folio1:hover a.icon {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.3s; }
+  pointer-events: auto; }
