@@ -259,45 +259,156 @@ header {
   #wrapper {
     top: 700px; } }
 
-#about .content {
-  background-color: #c0c0c0; }
-  #about .content h2, #about .content p {
-    color: #1f201a; }
-  #about .content a {
-    margin-top: 1em; }
-
-#about .portrait {
-  border: 15px solid #c0c0c0;
-  background: url("../images/portrait.jpg") no-repeat top center;
-  background-size: cover;
-  -webkit-filter: grayscale(90%);
-          filter: grayscale(90%);
-  height: 300px;
-  vertical-align: middle; }
+#about {
+  padding-top: 3.5em; }
+  #about .content {
+    background-color: #c0c0c0; }
+    #about .content h2, #about .content p {
+      color: #1f201a; }
+    #about .content a {
+      margin-top: 1em; }
+  #about .portrait {
+    border: 15px solid #c0c0c0;
+    background: url("../images/portrait.jpg") no-repeat top center;
+    background-size: cover;
+    -webkit-filter: grayscale(90%);
+            filter: grayscale(90%);
+    height: 300px;
+    vertical-align: middle; }
 
 @media (min-width: 500px) {
-  #about {
-    padding: 3.5em 0; }
-    #about .portrait {
-      height: 450px; } }
+  #about .portrait {
+    height: 450px; } }
 
 @media (min-width: 990px) {
   #about .content {
     height: 450px;
     padding: 7em 4em 0 4em; } }
 
-.skills-wrapper {
-  overflow: hidden;
-  background-color: #1f201a; }
-
-.sliding-background {
-  background: url("../images/skills.png") repeat-x;
-  height: 200px;
-  width: 5000px;
-  animation: skill-slide 60s linear infinite; }
-
 @keyframes skill-slide {
   0% {
     transform: translate3d(0, 0, 0); }
   100% {
     transform: translate3d(-1692px, 0, 0); } }
+
+#skills {
+  color: #1f201a;
+  padding-top: 3.5em; }
+  #skills .content {
+    background-color: #A89447;
+    padding-bottom: 3em; }
+  #skills div div h2 {
+    font-size: 1.5em;
+    padding: 0 0.5em 0.5em; }
+  #skills .skills-wrapper {
+    overflow: hidden;
+    background-color: #1f201a;
+    box-shadow: 0 0 15px 3px #1f201a; }
+    #skills .skills-wrapper .sliding-background {
+      background: url("../images/skills.png") repeat-x;
+      height: 200px;
+      width: 5000px;
+      animation: skill-slide 60s linear infinite; }
+
+@media (min-width: 500px) {
+  #skills div div h2 {
+    font-size: 1.8em;
+    margin: 1em 0; } }
+
+.folio1 {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  float: left;
+  border: 10px solid #000;
+  overflow: hidden;
+  position: relative;
+  text-align: center; }
+
+.folio1 .face {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0; }
+
+/* styling effects when hover takes effect */
+.folio1 img {
+  display: block;
+  position: relative; }
+
+.folio1 h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px; }
+
+.folio1 p {
+  font-style: italic;
+  font-size: 12px;
+  position: relative;
+  color: #fff;
+  padding: 20px;
+  text-align: center; }
+
+.folio1 a.icon {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #fff;
+  border-radius: 25px;
+  color: #000;
+  text-transform: uppercase; }
+
+.folio1 img {
+  transition: 0.5s; }
+
+.folio1 .face {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: 500ms; }
+
+.folio1 h2 {
+  opacity: 0;
+  background: transparent;
+  transform: rotate(180deg) skew(100deg, 100deg);
+  transition: 500ms;
+  font-size: 32px; }
+
+.folio1 p {
+  font-size: 22px;
+  opacity: 0;
+  transform: rotate(180deg) skew(100deg, 100deg);
+  transition: 500ms; }
+
+.folio1 a.icon {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 500ms; }
+
+/* Hover overs */
+.folio1:hover .face {
+  opacity: 1;
+  transition-delay: 0s;
+  cursor: pointer; }
+
+.folio1:hover img {
+  transition-delay: 0s; }
+
+.folio1:hover h2 {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.1s; }
+
+.folio1:hover p {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.2s; }
+
+.folio1:hover a.icon {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.3s; }
