@@ -8,10 +8,9 @@
 }
 
 #skills {
-  color: $ink;
   padding-top: 3.5em;
   .content {
-    background-color: $gold;
+    //background-color: $gold;
     padding-bottom: 3em;
   }
   div div h2 {
@@ -20,8 +19,8 @@
   }
   .skills-wrapper {
     overflow: hidden;
-    background-color: $ink;
-    box-shadow: 0 0 15px 3px $ink;
+    //background-color: $ink;
+    //box-shadow: 0 0 15px 3px $ink;
     .sliding-background {
       background: url('../images/skills.png') repeat-x;
       height: 200px;
