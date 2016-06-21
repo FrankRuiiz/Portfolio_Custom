@@ -16,6 +16,7 @@
 }
 
 header {
+  border-bottom: 10px solid $ink;
   z-index: 5;
   position: absolute;
   .content {
@@ -91,6 +92,7 @@ header {
     .intro {
       h1 {
         font-size: 6em;
+        letter-spacing: 3px;
       }
 
       ul li {

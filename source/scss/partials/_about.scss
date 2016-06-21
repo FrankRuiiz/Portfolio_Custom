@@ -1,9 +1,9 @@
 #about {
-  padding: 2.5em 1em;
   background: url(../images/texturetastic_gray.png);
   .about-content {
-    h3, p {
+    p {
       color: $ink;
+      text-indent: 50px;
     }
     p, a {
       margin-top: 1.2em;

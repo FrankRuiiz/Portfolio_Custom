@@ -8,18 +8,44 @@
 }
 
 #skills {
-  padding-top: 3.5em;
-  .content {
-    //background-color: $gold;
-    padding-bottom: 3em;
+  h3 {
+    color: $gold;
   }
-  div div h2 {
-    font-size: 1.5em;
-    padding: 0 0.5em 0.5em;
+  p {
+    text-align: center;
+    margin-top: 2em;
+    padding: 0 1em;
+    font-size: 1.3em;
+    color: $silver;
+    margin-bottom: 80px;
   }
+
+  .skill-item {
+    .skill-icon {
+      font-size: 4em;
+      margin-bottom: 0.5em;
+    }
+    .skill-content {
+      h3 {
+        font-size: 1.75em;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          margin-top: 5px;
+          letter-spacing: 1px;
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+
   .skills-wrapper {
+    margin-top: 60px;
     overflow: hidden;
-    padding: 0;
     .sliding-background {
       background: url('../images/skills.png') repeat-x;
       height: 200px;
@@ -29,14 +55,7 @@
   }
 }
 
-@media (min-width: 500px) {
-  #skills {
-    div div h2 {
-      font-size: 1.8em;
-      margin: 1em 0;
-    }
-  }
-}
+
 
 
 
