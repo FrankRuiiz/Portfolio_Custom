@@ -19,8 +19,7 @@
   }
   .skills-wrapper {
     overflow: hidden;
-    //background-color: $ink;
-    //box-shadow: 0 0 15px 3px $ink;
+    padding: 0;
     .sliding-background {
       background: url('../images/skills.png') repeat-x;
       height: 200px;

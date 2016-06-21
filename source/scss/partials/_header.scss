@@ -1,6 +1,5 @@
 
 .headerBg, header {
-  //height: 45vh;
   height: 230px;
   width: 100%;
   top: 0;
@@ -9,7 +8,6 @@
 .headerBg {
   background: $ink url('../images/headerBgTest.jpg') no-repeat bottom center;
   background-size: cover;
-  //filter: grayscale(50%);
   position: fixed;
 }
 
@@ -36,6 +34,7 @@ header {
       text-transform: uppercase;
       margin: 0;
       font-size: 10vw;
+      letter-spacing: 2px;
       color: $gold;
     }
 
