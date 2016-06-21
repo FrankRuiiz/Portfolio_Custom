@@ -3,15 +3,37 @@
   box-sizing: border-box;
 }
 
+//set default font and font color
+
 body {
   font-family: 'Roboto Slab', serif;
   color: $white
 }
 
-#placeholder {
-  height: 500px
+//set section minimum height
+
+section {
+  margin: 0;
+  padding: 3.5em 1.5em;
+  min-height: 550px;
 }
 
+//set section title styles
 
+.section-title {
+    h2 {
+    color: $gold;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+}
 
+@media (min-width: 990px) {
+  .section-title {
+    h2 {
+      font-size: 4em;
+    }
+  }
+}
 

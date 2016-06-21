@@ -4,7 +4,7 @@
   color: #DCDCDC;
   text-transform: capitalize;
   letter-spacing: 0.1em;
-  font-size: 0.75em;
+  font-size: 0.90em;
   font-weight: 700;
   padding: 1em 1em;
   border-radius: 5px;
@@ -54,8 +54,20 @@ body {
   font-family: 'Roboto Slab', serif;
   color: #DCDCDC; }
 
-#placeholder {
-  height: 500px; }
+section {
+  margin: 0;
+  padding: 3.5em 1.5em;
+  min-height: 550px; }
+
+.section-title h2 {
+  color: #A89447;
+  font-size: 3em;
+  letter-spacing: 2px;
+  text-align: center; }
+
+@media (min-width: 990px) {
+  .section-title h2 {
+    font-size: 4em; } }
 
 .menu {
   padding: 0;
@@ -172,6 +184,7 @@ body {
   background-color: rgba(32, 37, 50, 0.9); }
 
 header {
+  border-bottom: 10px solid #1f201a;
   z-index: 5;
   position: absolute; }
   header .content {
@@ -189,6 +202,7 @@ header {
       text-transform: uppercase;
       margin: 0;
       font-size: 10vw;
+      letter-spacing: 2px;
       color: #A89447; }
     header .intro ul {
       padding: 0; }
@@ -223,7 +237,8 @@ header {
   .headerBg, header {
     height: 600px; }
   header .intro h1 {
-    font-size: 6em; }
+    font-size: 6em;
+    letter-spacing: 3px; }
   header .intro ul li {
     font-size: 1.72em; }
   header .contact-me .button {
@@ -260,31 +275,41 @@ header {
     top: 700px; } }
 
 #about {
-  padding-top: 3.5em; }
-  #about .content {
-    background: url(../images/texturetastic_gray.png); }
-    #about .content h2, #about .content p {
-      color: #1f201a; }
-    #about .content a {
-      margin-top: 1em; }
-  #about .portrait {
+  background: url(../images/texturetastic_gray.png); }
+  #about .about-content p {
+    color: #1f201a;
+    text-indent: 50px; }
+  #about .about-content p, #about .about-content a {
+    margin-top: 1.2em; }
+  #about .about-content a:last-child {
+    margin-left: 1em;
+    width: 12em; }
+  #about .about-portrait {
     border: 15px solid transparent;
     border-image: url(../images/texturetastic_gray.png) 10% stretch;
     background: url("../images/portrait.jpg") no-repeat top center;
     background-size: cover;
     -webkit-filter: grayscale(60%);
             filter: grayscale(60%);
-    height: 300px;
-    vertical-align: middle; }
+    height: 300px; }
 
 @media (min-width: 500px) {
-  #about .portrait {
+  #about .about-portrait {
     height: 450px; } }
 
 @media (min-width: 990px) {
-  #about .content {
+  #about .about-content {
     height: 450px;
-    padding: 7em 4em 0 4em; } }
+    padding: .5em 4em 0; }
+    #about .about-content p {
+      font-size: 1.15em; } }
+
+@media (min-width: 1200px) {
+  #about .about-content {
+    height: 450px;
+    padding: 2.5em 4em 0; }
+    #about .about-content p {
+      font-size: 1.2em; } }
 
 @keyframes skill-slide {
   0% {
@@ -292,25 +317,42 @@ header {
   100% {
     transform: translate3d(-1692px, 0, 0); } }
 
-#skills {
-  padding-top: 3.5em; }
-  #skills .content {
-    padding-bottom: 3em; }
-  #skills div div h2 {
-    font-size: 1.5em;
-    padding: 0 0.5em 0.5em; }
-  #skills .skills-wrapper {
-    overflow: hidden; }
-    #skills .skills-wrapper .sliding-background {
-      background: url("../images/skills.png") repeat-x;
-      height: 200px;
-      width: 5000px;
-      animation: skill-slide 60s linear infinite; }
+#skills h3 {
+  color: #A89447; }
 
-@media (min-width: 500px) {
-  #skills div div h2 {
-    font-size: 1.8em;
-    margin: 1em 0; } }
+#skills p {
+  text-align: center;
+  margin-top: 2em;
+  padding: 0 1em;
+  font-size: 1.3em;
+  color: #c0c0c0;
+  margin-bottom: 80px; }
+
+#skills .skill-item .skill-icon {
+  font-size: 4em;
+  margin-bottom: 0.5em; }
+
+#skills .skill-item .skill-content h3 {
+  font-size: 1.75em;
+  margin-bottom: 15px;
+  font-weight: 700; }
+
+#skills .skill-item .skill-content ul {
+  list-style: none;
+  padding: 0; }
+  #skills .skill-item .skill-content ul li {
+    margin-top: 5px;
+    letter-spacing: 1px;
+    font-size: 1.3em; }
+
+#skills .skills-wrapper {
+  margin-top: 60px;
+  overflow: hidden; }
+  #skills .skills-wrapper .sliding-background {
+    background: url("../images/skills.png") repeat-x;
+    height: 200px;
+    width: 5000px;
+    animation: skill-slide 60s linear infinite; }
 
 #portfolio .row {
   background: #c0c0c0 url(../images/texturetastic_gray.png); }
