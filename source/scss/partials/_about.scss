@@ -1,7 +1,7 @@
 #about {
+  padding-top: 3.5em;
   .content {
-
-    background-color: $silver;
+    background: url(../images/texturetastic_gray.png);
     h2, p {
       color: $ink;
     }
@@ -10,10 +10,11 @@
     }
   }
   .portrait {
-    border: 15px solid $silver;
+    border: 15px solid transparent;
+    border-image: url(../images/texturetastic_gray.png) 10% stretch;
     background: url('../images/portrait.jpg') no-repeat top center;
     background-size: cover;
-    filter: grayscale(90%);
+    filter: grayscale(60%);
     height: 300px;
     vertical-align: middle;
   }
@@ -21,7 +22,6 @@
 
 @media (min-width: 500px) {
   #about {
-    padding: 3.5em 0;
     .portrait {
       height: 450px;
     }
