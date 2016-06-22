@@ -8,16 +8,13 @@
 }
 
 #skills {
-  h3 {
-    color: $gold;
-  }
   p {
     text-align: center;
     margin-top: 1em;
     padding: 0 1em;
     font-size: 1.3em;
     color: $silver;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
 
   .skill-item {
@@ -30,6 +27,7 @@
         font-size: 1.75em;
         margin-bottom: 15px;
         font-weight: 700;
+        color: $gold;
       }
       ul {
         list-style: none;

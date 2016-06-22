@@ -317,16 +317,13 @@ header {
   100% {
     transform: translate3d(-1692px, 0, 0); } }
 
-#skills h3 {
-  color: #A89447; }
-
 #skills p {
   text-align: center;
   margin-top: 1em;
   padding: 0 1em;
   font-size: 1.3em;
   color: #c0c0c0;
-  margin-bottom: 40px; }
+  margin-bottom: 80px; }
 
 #skills .skill-item .skill-icon {
   font-size: 4em;
@@ -335,7 +332,8 @@ header {
 #skills .skill-item .skill-content h3 {
   font-size: 1.75em;
   margin-bottom: 15px;
-  font-weight: 700; }
+  font-weight: 700;
+  color: #A89447; }
 
 #skills .skill-item .skill-content ul {
   list-style: none;
@@ -356,6 +354,13 @@ header {
 
 #portfolio {
   background: #c0c0c0 url(../images/texturetastic_gray.png); }
+  #portfolio p {
+    text-align: center;
+    margin-top: 1em;
+    padding: 0 1em;
+    font-size: 1.3em;
+    color: #1f201a;
+    margin-bottom: 80px; }
   #portfolio .ch-grid {
     margin: 40px auto 0;
     padding: 0;
@@ -424,6 +429,9 @@ header {
 .ch-img-6 {
   background-image: url(../images/portfolio/wiki.png); }
 
+.ch-img-7 {
+  background-image: url(../images/portfolio/weather.png); }
+
 .ch-info h3 {
   color: #fff;
   text-transform: uppercase;
@@ -454,3 +462,36 @@ header {
   transform: scale(1);
   opacity: 1;
   pointer-events: auto; }
+
+#contact p {
+  text-align: center;
+  margin-top: 1em;
+  padding: 0 1em;
+  font-size: 1.3em;
+  color: #c0c0c0;
+  margin-bottom: 80px; }
+
+#contact .contact-item .contact-icon {
+  font-size: 4em;
+  margin-bottom: 0.5em; }
+
+#contact .contact-item .contact-content h3 {
+  font-size: 1.75em;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #A89447; }
+  #contact .contact-item .contact-content h3 a {
+    color: inherit;
+    text-decoration: none; }
+  #contact .contact-item .contact-content h3 a:hover {
+    color: #c0c0c0; }
+
+#footer {
+  height: 200px;
+  background-color: #000; }
+  #footer p {
+    font-size: 0.75em;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 90px; }
