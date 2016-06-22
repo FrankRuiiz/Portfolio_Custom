@@ -407,7 +407,22 @@ header {
   transition: all 0.4s ease-in-out 0.2s; }
 
 .ch-img-1 {
-  background-image: url(http://tympanus.net/Tutorials/CircleHoverEffects/images/14.jpg); }
+  background-image: url(../images/portfolio/mboutique.png); }
+
+.ch-img-2 {
+  background-image: url(../images/portfolio/mortalmatch.png); }
+
+.ch-img-3 {
+  background-image: url(../images/portfolio/sgt.png); }
+
+.ch-img-4 {
+  background-image: url(../images/portfolio/calculator.png); }
+
+.ch-img-5 {
+  background-image: url(../images/portfolio/guessgame.png); }
+
+.ch-img-6 {
+  background-image: url(../images/portfolio/wiki.png); }
 
 .ch-info h3 {
   color: #fff;
