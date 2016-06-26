@@ -21,4 +21,4 @@ $(function() {
       }
       lastElem = $(this);
     }).last().addClass('no-bullet');
-})();
+});

@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     del = require('del'),
     runSequence = require('run-sequence'),
-    // cssnano = require('gulp-cssnano');
     minifyCSS = require('gulp-clean-css');
 
 var browserSync = require('browser-sync').create();
@@ -61,20 +60,10 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest('dist/fonts'))
 });
 
-
-// task for mnifying css
-// gulp.task('minify-css', function() {
-//    return gulp.src('source/css/*.css')
-//        .pipe(minifyCSS({compatibility: 'ie8'}))
-//        .pipe(gulp.dest('dist/css'))
-// });
-
-
 // task to process js files
 gulp.task('useref', function() {
     return gulp.src('source/*.html')
         .pipe(useref())
-        // .pipe(gulpIf('*.css', cssnano()))
         .pipe(gulpIf('*.js', uglify()))
         .pipe(gulpIf('*.css', minifyCSS()))
         .pipe(gulp.dest('dist'));
