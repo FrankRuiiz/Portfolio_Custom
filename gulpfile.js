@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     del = require('del'),
     runSequence = require('run-sequence'),
-    cssnano = require('gulp-cssnano');
+    // cssnano = require('gulp-cssnano');
+    minifyCSS = require('gulp-clean-css');
 
 var browserSync = require('browser-sync').create();
 
@@ -61,13 +62,22 @@ gulp.task('fonts', function() {
 });
 
 
+// task for mnifying css
+// gulp.task('minify-css', function() {
+//    return gulp.src('source/css/*.css')
+//        .pipe(minifyCSS({compatibility: 'ie8'}))
+//        .pipe(gulp.dest('dist/css'))
+// });
+
+
 // task to process js files
 gulp.task('useref', function() {
-   return gulp.src('source/index.html')
-       .pipe(useref())
-       .pipe(gulpIf('*.js', uglify()))
-       .pipe(gulpIf('*.css', cssnano()))
-       .pipe(gulp.dest('dist'))
+    return gulp.src('source/*.html')
+        .pipe(useref())
+        // .pipe(gulpIf('*.css', cssnano()))
+        .pipe(gulpIf('*.js', uglify()))
+        .pipe(gulpIf('*.css', minifyCSS()))
+        .pipe(gulp.dest('dist'));
 });
 
 // task for cleaning the dist file
@@ -78,7 +88,7 @@ gulp.task('clean:dist', function() {
 // task to run the build sequences in order
 gulp.task('build', function(callback) {
    runSequence('clean:dist',
-   ['sass', 'useref', 'images', 'fonts'],
+   ['sass', 'images', 'fonts'], 'useref',
    callback
    )
 });
